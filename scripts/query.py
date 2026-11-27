@@ -1,7 +1,7 @@
 """
 รันคำสั่ง SQL กับคลังข้อมูล แล้วพิมพ์ผลเป็นตาราง
 
-    python scripts/query.py "SELECT * FROM warehouse.dim_product LIMIT 5"
+    python scripts/query.py "SELECT * FROM raw.products LIMIT 5"
     python scripts/query.py queries/q1_revenue_by_category_month.sql
 """
 import sys
@@ -13,7 +13,7 @@ import duckdb
 sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
-DB_PATH = ROOT / "northwind.duckdb"
+DB_PATH = ROOT / "scripts" / "northwind.duckdb"
 
 
 def main() -> None:
