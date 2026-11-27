@@ -1,12 +1,4 @@
-# print('Hello World\n')
-# print('My name is: Rantawadee Sritakorn')
-# """
-# E + L ของ ELT: อ่านไฟล์ CSV ของ Northwind จาก 2 ระบบ แล้วโหลดเข้า DuckDB 
-# python scripts/load_raw.py
 
-# ผลลัพธ์: ไฟล์ northwind.duckdb ที่มี schema ชื่อ raw และตาราง 9 ตาราง (จากระบบขายปัจจุบัน 7 และระบบขายเดิม 2)
-# รันซ้ำได้กี่ครั้งก็ได้ (CREATE OR REPLACE) ผลลัพธ์เหมือนเดิมทุกครั้ง
-# """
 # import sys
 from pathlib import Path
 
@@ -19,7 +11,7 @@ ROOT = Path(__file__).resolve().parent
 print('ROOT')
 DATA_DIR = ROOT.parent / "raw_data"
 print(DATA_DIR)
-DB_PATH = ROOT / "northwind.duckdb"
+DB_PATH = ROOT.parent / "northwind_dw.duckdb"
 my_dict = {'name':'Rantawadee','secondname': 'S.'
 }
 print(f"My name is {my_dict['secondname']}")
